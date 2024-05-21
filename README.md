@@ -29,7 +29,7 @@ D : pop  reg             -> reg = [++SP]
 E : jnz  reg/imm8        -> reg/imm8 != 0 ? PC = HL : NOP
 F : halt                 => H = 1
 
-=> Modify the Status Register
+=> Modifies the Status Register
 ```
 
 ## MMIO
