@@ -1,0 +1,6 @@
+[submodule "fateful"]
+	path = fateful
+	url = https://github.com/commonkestrel/fateful.git
+[submodule "fate"]
+	path = fate
+	url = https://github.com/commonkestrel/fate.git
