@@ -12,7 +12,7 @@ The F8ful CPU is an 8-bit homebrew CPU inspired by both Ben Eater and JDH's home
 
 ## Instruction Set:
 | Op Code | Instruction |        Operands        |                               Effect                                  | Modifies SREG |
-|---------|-------------|------------------------|-----------------------------------------------------------------------|---------------|
+|:-------:|:-----------:|:----------------------:|:---------------------------------------------------------------------:|:-------------:|
 |  `0x0`  |    `add`    |     reg, reg/imm8      |                          `reg += reg/imm8`                            |      ✅       |
 |  `0x1`  |    `sub`    |     reg, reg/imm8      |                          `reg -= reg/imm8`                            |      ✅       |
 |  `0x2`  |    `adc`    |     reg, reg/imm8      |                        `reg += reg/imm8 + C`                          |      ✅       |
