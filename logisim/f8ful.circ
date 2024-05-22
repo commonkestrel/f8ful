@@ -5,6 +5,7 @@
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
       <a name="appear" val="right"/>
+      <a name="facing" val="west"/>
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
     </tool>
@@ -121,6 +122,20 @@
     <comp lib="0" loc="(100,680)" name="Clock">
       <a name="label" val="CLK"/>
     </comp>
+    <comp lib="0" loc="(1000,200)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="bit1" val="4"/>
+      <a name="bit2" val="3"/>
+      <a name="bit3" val="2"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="5"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="6"/>
+      <a name="incoming" val="8"/>
+      <a name="spacing" val="2"/>
+    </comp>
     <comp lib="0" loc="(1010,250)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="B"/>
@@ -230,12 +245,14 @@
     <comp loc="(280,760)" name="control"/>
     <comp loc="(780,90)" name="sreg"/>
     <wire from="(0,50)" to="(0,830)"/>
-    <wire from="(0,50)" to="(780,50)"/>
+    <wire from="(0,50)" to="(790,50)"/>
     <wire from="(0,830)" to="(50,830)"/>
     <wire from="(100,580)" to="(120,580)"/>
     <wire from="(100,600)" to="(120,600)"/>
     <wire from="(100,680)" to="(130,680)"/>
     <wire from="(1000,1110)" to="(1280,1110)"/>
+    <wire from="(1000,200)" to="(1000,210)"/>
+    <wire from="(1000,210)" to="(1030,210)"/>
     <wire from="(1000,410)" to="(1000,600)"/>
     <wire from="(1000,410)" to="(1030,410)"/>
     <wire from="(1000,600)" to="(1310,600)"/>
@@ -390,9 +407,16 @@
     <wire from="(540,150)" to="(560,150)"/>
     <wire from="(60,160)" to="(370,160)"/>
     <wire from="(60,160)" to="(60,210)"/>
+    <wire from="(780,110)" to="(980,110)"/>
+    <wire from="(780,130)" to="(980,130)"/>
+    <wire from="(780,150)" to="(980,150)"/>
     <wire from="(780,170)" to="(810,170)"/>
-    <wire from="(780,50)" to="(780,90)"/>
+    <wire from="(780,190)" to="(980,190)"/>
+    <wire from="(780,90)" to="(790,90)"/>
+    <wire from="(790,50)" to="(790,90)"/>
+    <wire from="(790,90)" to="(980,90)"/>
     <wire from="(810,170)" to="(810,530)"/>
+    <wire from="(810,170)" to="(980,170)"/>
     <wire from="(840,1070)" to="(1030,1070)"/>
     <wire from="(840,800)" to="(840,1070)"/>
     <wire from="(850,290)" to="(1030,290)"/>
@@ -2824,7 +2848,7 @@
 5*0 63 a4 5b 5*0 63 4 5b
 5*0 63 a4 5c 5*0 63 4 5c
 5*0 63 a4 5c 5*0 63 4 5c
-5*0 63 a4 9 5*0 63 4 9
+5*0 63 a4 9 5*0 63 4 1
 13*0 50 7*0 20 50 8*0 50 5*0
 20 60 8*0 60 15*0 10 5*0 20
 60 8*0 50 6*0 60 16*0 50 13*0
@@ -2841,11 +2865,9 @@
       <a name="addrWidth" val="16"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 16 8
-78 7 c8 b c8 0 a8 0
-c e8 1 f0 72 0 78 0
-79 1 73 0 3 1 70 1
-71 3 1a 1 a8 0 12 e2
-d6 d7 e8 1
+78 0 71 0 8 1 68 4
+8d ff ff 4d 4 45 5 a8
+0 2 e5 f0
 </a>
     </comp>
     <comp lib="4" loc="(450,750)" name="ROM">
